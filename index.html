@@ -1,34 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="name">GAMUTAN, Adrian C.</h1>
-         <img src="profilepic.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">IT103 - 2T 25-26</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
-      <section id="achievements">
-         <h2>Achievements/Certifications</h2>
-         <ul>
-            <li>Achievement 1</li>
-            <li>Achievement 2</li>
-            <li>Achievement 3</li>
-         </ul>
-      </section>
-      <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-         </ul>
-      </section>
-      <script src="script.js"></script>
-   </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adrian Gamutan — Portfolio</title>
+  <meta name="description" content="Portfolio of Agamutan — projects, skills, and contact." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Agamutan</a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="btn-outline" href="https://agamutan.github.io/m1fa2-landingpage/" target="_blank" rel="noopener noreferrer">
+              View Landing Page
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+        <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Hello — I'm Agamutan</h1>
+          <p class="lead">I build things for the web — front-end development, UI/UX experiments, and accessible interactions.</p>
+          <p>
+            <a class="btn-primary" href="https://agamutan.github.io/m1fa2-landingpage/" target="_blank" rel="noopener noreferrer">
+              Explore my landing page
+            </a>
+            <a class="btn-outline" href="#projects">See projects</a>
+          </p>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="mockup">Project Showcase</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Selected projects</h2>
+      <p class="muted">A few highlights — click to view demos or code.</p>
+
+      <div class="projects-grid">
+        <article class="project card reveal">
+          <img src="assets/project1.png" alt="Project 1 screenshot" class="project-thumb" />
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p class="muted">Short description of Project One.</p>
+            <p class="card-actions">
+              <a class="btn-sm" href="#">Live</a>
+              <a class="btn-sm btn-outline" href="#">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project card reveal">
+          <img src="assets/project2.png" alt="Project 2 screenshot" class="project-thumb" />
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p class="muted">Short description of Project Two.</p>
+            <p class="card-actions">
+              <a class="btn-sm" href="#">Live</a>
+              <a class="btn-sm btn-outline" href="#">Code</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <p>I’m a developer focusing on clean, performant UIs with attention to accessibility and polish. I like small, interactive experiments and learning new web APIs.</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p class="muted">Want to collaborate? Reach out or copy my email.</p>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Send</button>
+          <button type="button" id="copy-email" class="btn-outline">Copy Email</button>
+        </div>
+
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Agamutan — Built with care.</small>
+      <div class="footer-links">
+        <a href="https://github.com/agamutan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://twitter.com/agamutan" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
 </html>
